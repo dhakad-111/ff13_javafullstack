@@ -1,0 +1,7 @@
+echo "# ff13_javafullstack" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:dhakad-111/ff13_javafullstack.git
+git push -u origin main
