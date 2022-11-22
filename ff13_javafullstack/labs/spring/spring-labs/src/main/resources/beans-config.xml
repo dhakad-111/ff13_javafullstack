@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="order1" class="com.labs.spring.core.Order">
+		<property name="id" value="100" />
+		<property name="status" value="CONFIRMED" />
+		<property name="totalAmount" value="1000" />
+		<property name="orderBy" value="amit" />
+		<property name="items">
+			<list>
+				<ref bean="item1" />
+				<ref bean="item2" />
+			</list>
+		</property>
+	</bean>
+	<bean id="item1" class="com.labs.spring.core.Item">
+		<property name="id" value="200" />
+		<property name="name" value="Burger" />
+		<property name="price" value="100" />
+		<property name="quantity" value="5" />
+		<property name="cusine" value="italian" />
+		<property name="veg" value="true" />
+	</bean>
+	<bean id="item2" class="com.labs.spring.core.Item">
+		<property name="id" value="201" />
+		<property name="name" value="Burger" />
+		<property name="price" value="100" />
+		<property name="quantity" value="5" />
+		<property name="cusine" value="italian" />
+		<property name="veg" value="true" />
+	</bean>
+</beans>
